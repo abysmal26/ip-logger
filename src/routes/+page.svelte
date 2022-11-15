@@ -2,7 +2,7 @@
     import { onMount } from 'svelte';
     import { LogIP } from './logger';
 
-    onMount(() => LogIP());
+    onMount(() => LogIP(window.location.origin));
 </script>
 
 <svelte:head>
